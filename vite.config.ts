@@ -1,21 +1,20 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import * as path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  resolve: {
-    alias: [
-      { find: "@", replacement: path.resolve(__dirname, "src") },
-      { find: "@pages", replacement: path.resolve(__dirname, "src/pages") },
-      {
-        find: "@components",
-        replacement: path.resolve(__dirname, "src/components"),
+export default defineConfig(({ mode }) => {
+  return {
+    resolve: {
+      alias: {
+        "@": "/src",
+        "@components": "/src/components",
       },
-    ],
-  },
-  server: {
-    port: 3000,
-  },
-  plugins: [react()],
+    },
+    build: {
+      outDir: "dist",
+    },
+    server: {
+      port: mode === "development" ? 3000 : undefined,
+    },
+    plugins: [react()],
+  };
 });
