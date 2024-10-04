@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # react-vite-boilerplate
 React + TypeScript + Vite boilerplate (with husky, esling, prettier)
 =======
@@ -33,3 +34,7 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 >>>>>>> a589013 (Initial commit)
+=======
+# Dashboard-Client
+React, RTK, TypeScript, React-Query, Vite, StyledComponent, MaterialUi
+>>>>>>> 9401d9add9032adf54852397edfa59fe1981a078
