@@ -1,4 +1,4 @@
-import { DisabledButton } from "@/styles/DisabledButton";
+import Button from "@/components/Button/Button";
 
 interface DefaultButtonProps {
   dialogOpenHandler: () => void;
@@ -8,7 +8,7 @@ interface DefaultButtonProps {
 const DefaultButton = ({ dialogOpenHandler, roleNo }: DefaultButtonProps) => {
   const isDisabled = roleNo !== "0" && roleNo !== "1";
   return (
-    <DisabledButton
+    <Button
       onClick={dialogOpenHandler}
       variant="contained"
       sx={{
@@ -17,7 +17,7 @@ const DefaultButton = ({ dialogOpenHandler, roleNo }: DefaultButtonProps) => {
       }}
     >
       계정 상태 변경
-    </DisabledButton>
+    </Button>
   );
 };
 

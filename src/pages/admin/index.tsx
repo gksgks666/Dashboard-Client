@@ -56,7 +56,7 @@ const Admin: React.FC = () => {
     if (data) {
       setRowData(addColumn(data.dataArray, userRole));
     }
-  }, []);
+  }, [data]);
 
   const columns: GridColDef[] = [
     { field: "name", headerName: "Name", flex: 0.5 },

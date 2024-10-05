@@ -112,14 +112,14 @@ const Navbar = ({
                 gap: "1rem",
               }}
             >
-              <Box
+              {/* <Box
                 component="img"
                 alt="profile"
                 height="32px"
                 width="32px"
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
-              />
+              /> */}
               <Box textAlign="left">
                 <Typography
                   fontWeight="bold"
