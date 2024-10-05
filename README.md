@@ -1,40 +1,61 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# react-vite-boilerplate
-React + TypeScript + Vite boilerplate (with husky, esling, prettier)
-=======
-# React + TypeScript + Vite
+# React + Typescript로 제작한 Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 프로젝트 소개
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# URL
+https://dashboard-dj.vercel.app
 
-## Expanding the ESLint configuration
+-Test 임시 계정(ID: admin@admin.com PW: 123456)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+backend github Url
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+
+# 프로젝트 구조
+```bash
+📦src
+ ┣ 📂components
+ ┃ ┣ 📂Button
+ ┃ ┣ 📂DatePicker
+ ┃ ┣ 📂Fab
+ ┃ ┃ ┣ 📂Content
+ ┃ ┣ 📂Helper
+ ┃ ┣ 📂Modal
+ ┃ ┃ ┣ 📂Content
+ ┣ 📂hooks
+ ┃ ┣ 📂api
+ ┃ ┃ ┣ 📂mutations
+ ┃ ┃ ┣ 📂queries
+ ┣ 📂pages
+ ┃ ┣ 📂admin
+ ┃ ┣ 📂breakdown
+ ┃ ┣ 📂customers
+ ┃ ┣ 📂daily
+ ┃ ┣ 📂dashboard
+ ┃ ┣ 📂errorlog
+ ┃ ┣ 📂invalidpage
+ ┃ ┣ 📂layout
+ ┃ ┣ 📂login
+ ┃ ┣ 📂monthly
+ ┃ ┣ 📂overview
+ ┃ ┗ 📂register
+ ┣ 📂router
+ ┣ 📂rtk
+ ┃ ┣ 📂features
+ ┣ 📂styles
+ ┣ 📂types
+ ┃ ┣ 📂Module
+ ┣ 📂utils
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
->>>>>>> a589013 (Initial commit)
-=======
-# Dashboard-Client
-React, RTK, TypeScript, React-Query, Vite, StyledComponent, MaterialUi
->>>>>>> 9401d9add9032adf54852397edfa59fe1981a078
+# Tech Skill Used
+|Category|Tech|
+|:-:|:-:|
+|**프레임워크 및 언어**|**React, TypeScript**|
+|**전역 상태 관리**|**Redux Toolkit**|
+|**서버 상태 관리**|**React-Query**|
+|**스타일링**|**StyledComponent, MaterialUi**|
+|**코드 관리**|**ESLint, Husky, Prettier**|
+|**번들러**|**VITE**|
+|**배포 플랫폼**|**Vercel**|
