@@ -41,31 +41,45 @@ https://dashboard-dj.vercel.app
 
 <br/>
 
-# 주요 기능
+# 프로젝트 소개
+- 로그인, 회원가입, 로그아웃 등 사용자 인증 절차 구현
+- Admin 권한을 가진 사용자는 다른 User들의 권한 변경 가능
+- Chart 및 숫자로 데이터를 시각화
+- 상호작용할 앱의(ex. 커뮤니티 사이트) 일반 User들의 계정을 정지 및 활성화 기능
+- Dashboard 및 상호작용할 앱의 오류정보를 ErrorLog 탭에서 확인가능
 
-- `JWT (Json Web Token) 및 Cookie`를 사용한 token 기반의 사용자 인증
+<br/>
+
+# 주요 기능
+- `JWT (Json Web Token) 및 Cookie`를 사용한 token 기반의 사용자 인증(Authentication)
+- AccessToken 및 User 권한 level에 따른 인가(Authorization)
 - Mui를 이용한 `다크모드 지원`
+- RTK를 사용한 효율적인 전역 Modal 관리
 
 <br/>
 
 # 개선 사항
-
 ### 성능 개선
 
 #### Suspense, lazy를 이용한 코드 스플리팅
-
 - CSR의 **`초기 로딩 시간이 긴 문제를 개선`** 하기 위해 Route 페이지 별로 코드 스플리팅을 적용하여 **번들 사이즈를 줄였습니다.**
 - lazy를 사용하여 페이지가 필요한 시점에 **`동적으로 컴포넌트를 load`**하며, Suspense를 사용하여 페이지가 load되는 동안 loading 화면을 노출합니다.
-
+- 
 #### 빌드 시간 단축을 위한 Vite 번들러 사용
-
 - **`빌드 속도가 느린 CRA의 단점을 개선`** 하기 위해 번들링 도구로 Vite를 선택하였습니다.
 - Vite의 **esbuild와 브라우저의 ESM을 이용한 번들링**을 활용하여 개발 속도를 개선했습니다.
 
 <br/>
 
-# 프로젝트 구조
+### 에러 처리
+#### ErrorBoundary를 이용하여 선언적으로 에러 처리
+- 본 프로젝트는 AsyncBoundary를 따로 미구현, Suspense와 ErrorBoundary를 각 Wrapper 컴포넌트를 통해 관리합니다.
+- 컴포넌트 내부에서는 비동기 성공 상태와 비즈니스 로직에만 집중하여 개발 할 수 있습니다.
+- 컴포넌트 에러로 인해 전체 앱이 멈추는 현상을 방지 할 수 있습니다.
 
+<br/>
+
+# 프로젝트 구조
 ```bash
 📦src
  ┣ 📂components
