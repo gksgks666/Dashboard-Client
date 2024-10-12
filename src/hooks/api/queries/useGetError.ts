@@ -1,6 +1,6 @@
 import { QueryFunctionContext, useQuery } from "@tanstack/react-query";
 import { queryKeys } from "./queryKey";
-import { authApi } from "@/utils";
+import { authApi } from "@/utils/axios";
 import {
   ErrorLogProps,
   ErrorLogList,

@@ -1,5 +1,5 @@
 import toast, { ToastOptions } from "react-hot-toast";
-import { isEmpty } from "@/utils";
+import { isEmpty } from "@/utils/customFn";
 
 export const useToast = (
   message: string,
