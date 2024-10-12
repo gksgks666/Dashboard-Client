@@ -2,9 +2,9 @@ type TokenType = Record<string, Record<number | string, string>>;
 
 export const tokensDark: TokenType = {
   grey: {
-    0: "#ffffff", // manually adjusted
-    10: "#f6f6f6", // manually adjusted
-    50: "#f0f0f0", // manually adjusted
+    0: "#ffffff",
+    10: "#f6f6f6",
+    50: "#f0f0f0",
     100: "#e0e0e0",
     200: "#c2c2c2",
     300: "#a3a3a3",
@@ -14,7 +14,7 @@ export const tokensDark: TokenType = {
     700: "#3d3d3d",
     800: "#292929",
     900: "#141414",
-    1000: "#000000", // manually adjusted
+    1000: "#000000",
   },
   primary: {
     // blue
@@ -23,14 +23,14 @@ export const tokensDark: TokenType = {
     300: "#7a7f9d",
     400: "#4d547d",
     500: "#21295c",
-    600: "#191F45", // manually adjusted
+    600: "#191F45",
     700: "#141937",
     800: "#0d1025",
     900: "#070812",
   },
   secondary: {
     // yellow
-    50: "#f0f0f0", // manually adjusted
+    50: "#f0f0f0",
     100: "#fff6e0",
     200: "#ffedc2",
     300: "#ffe3a3",
@@ -93,6 +93,7 @@ export const tokensDark: TokenType = {
 
 function reverseTokens(tokensDark: TokenType): TokenType {
   const reversedTokens: TokenType = {};
+
   Object.entries(tokensDark).forEach(([key, val]) => {
     const keys = Object.keys(val);
     const values = Object.values(val);
@@ -103,6 +104,7 @@ function reverseTokens(tokensDark: TokenType): TokenType {
     }
     reversedTokens[key] = reversedObj;
   });
+
   return reversedTokens;
 }
 export const tokensLight = reverseTokens(tokensDark);
@@ -189,30 +191,30 @@ export const themeSettings = (mode: "light" | "dark") => {
           }),
     },
     typography: {
-      fontFamily: ["Inter", "sans-serif"].join(","),
+      fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
       fontSize: 12,
       h1: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
         fontSize: 40,
       },
       h2: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
         fontSize: 32,
       },
       h3: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
         fontSize: 24,
       },
       h4: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
         fontSize: 20,
       },
       h5: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
         fontSize: 16,
       },
       h6: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Noto Sans KR", "sans-serif"].join(","),
         fontSize: 14,
       },
     },
