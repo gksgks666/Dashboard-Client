@@ -44,15 +44,20 @@ const ErrorLog: React.FC = () => {
   };
 
   const columns: GridColDef[] = [
-    { field: "_id", headerName: "ID", flex: 1 },
-    { field: "userId", headerName: "User ID", flex: 1 },
-    { field: "domain", headerName: "domain", flex: 1 },
-    { field: "stackTrace", headerName: "errorMessage", flex: 1 },
-    { field: "createdAt", headerName: "CreatedAt", flex: 1 },
+    { field: "_id", headerName: "ID", width: 200 /* flex: 1, */ },
+    { field: "userId", headerName: "User ID", width: 200 /* flex: 1 */ },
+    { field: "domain", headerName: "domain", width: 100 /* flex: 1 */ },
+    {
+      field: "stackTrace",
+      headerName: "errorMessage",
+      width: 300 /* flex: 1 */,
+    },
+    { field: "createdAt", headerName: "CreatedAt", width: 140 /* flex: 1 */ },
     {
       field: "readmore",
       headerName: "Readmore",
-      flex: 1,
+      width: 140,
+      /* flex: 1, */
       renderCell: (params: GridRenderCellParams<ErrorLogList>) => (
         <ModalFabButton data={params.row} />
       ),
@@ -60,7 +65,7 @@ const ErrorLog: React.FC = () => {
   ];
 
   return (
-    <Box m="1.5rem 2.5rem">
+    <Box m="1.5rem 2.5rem" width="1080px">
       <Header title="ERRORLOG" subtitle="" />
       <DatePicker
         startDate={startDate}
@@ -69,7 +74,7 @@ const ErrorLog: React.FC = () => {
         setEndDate={setEndDate}
       />
       <Box
-        height="80vh"
+        height="100%"
         sx={{
           "& .MuiDataGrid-root": {
             border: "none",

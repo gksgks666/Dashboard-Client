@@ -53,7 +53,7 @@ function Dashboard() {
   return (
     <Box m="1.5rem 2.5rem">
       <FlexBetween>
-        <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+        <Header title="DASHBOARD" subtitle="" />
 
         <Box>
           <Button
@@ -142,7 +142,7 @@ function Dashboard() {
           sx={{
             "& .MuiDataGrid-root": {
               border: "none",
-              borderRadius: "5rem",
+              borderRadius: "1rem",
             },
             "& .MuiDataGrid-cell": {
               borderBottom: "none",

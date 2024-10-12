@@ -47,25 +47,14 @@ const Customers: React.FC = () => {
   }, [data]);
 
   const columns: GridColDef[] = [
-    {
-      field: "_id",
-      headerName: "ID",
-      flex: 1,
-    },
-    {
-      field: "name",
-      headerName: "Name",
-      flex: 0.5,
-    },
-    {
-      field: "email",
-      headerName: "Email",
-      flex: 1,
-    },
+    { field: "_id", headerName: "ID", width: 200 /* flex: 1, */ },
+    { field: "name", headerName: "Name", width: 140 /* flex: 0.5, */ },
+    { field: "email", headerName: "Email", width: 200 /* flex: 1, */ },
     {
       field: "accoutstatus",
       headerName: "AccountStatus",
-      flex: 0.5,
+      width: 100,
+      /* flex: 0.5, */
       renderCell: (param: GridRenderCellParams<CustomerList>) => {
         return param.row.accountstatus === true ? "활성화" : "비활성화";
       },
@@ -73,7 +62,8 @@ const Customers: React.FC = () => {
     {
       field: "none",
       headerName: "AccountStatusChange",
-      flex: 0.5,
+      width: 140,
+      /* flex: 0.5, */
       renderCell: (param: GridRenderCellParams<CustomerList>) => {
         return (
           <ButtonAndSelect
@@ -87,7 +77,7 @@ const Customers: React.FC = () => {
   ];
 
   return (
-    <Box m="1.5rem 2.5rem">
+    <Box m="1.5rem 2.5rem" width="780px">
       <Header title="Customers Access Levels" subtitle="" />
       <Box
         mt="40px"

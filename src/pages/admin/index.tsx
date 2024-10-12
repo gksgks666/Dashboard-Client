@@ -59,12 +59,13 @@ const Admin: React.FC = () => {
   }, [data]);
 
   const columns: GridColDef[] = [
-    { field: "name", headerName: "Name", flex: 0.5 },
-    { field: "email", headerName: "Email", flex: 1 },
+    { field: "name", headerName: "Name", width: 140 /* flex: 0.5 */ },
+    { field: "email", headerName: "Email", width: 200 /* flex: 1 */ },
     {
       field: "role",
       headerName: "Role",
-      flex: 0.5,
+      width: 140,
+      /* flex: 0.5, */
       renderCell: (params: GridRenderCellParams<UserList>) => {
         return params.value === "0"
           ? "SuperAdmin"
@@ -78,7 +79,8 @@ const Admin: React.FC = () => {
     {
       headerName: "Select",
       field: "select",
-      flex: 0.5,
+      width: 200,
+      /* flex: 0.5, */
       renderCell: (params: GridRenderCellParams<UserList>) => (
         <ButtonAndSelect data={params.row} setRowData={setRowData} />
       ),
@@ -86,7 +88,7 @@ const Admin: React.FC = () => {
   ];
 
   return (
-    <Box m="1.5rem 2.5rem">
+    <Box m="1.5rem 2.5rem" width="680px">
       <Header title="Dashboard Access Levels" subtitle="" />
       <Box
         mt="40px"
