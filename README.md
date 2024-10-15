@@ -76,7 +76,6 @@ https://dashboard-dj.vercel.app
 - 일관된 스타일 적용이 필요한 Button 컴포넌트의 경우 variant 속성을 활용하여 스타일을 지정합니다.
 
 ### API 요청전 작업 처리
-#### axios 요청전 작업 처리
 - interceptors를 활용해 **axios 요청 전**에 accessToken을 **`Header에 포함하여 API 요청 시 함께 전달`** 합니다.
 - jwt-decode를 사용해 토큰 만료 시간을 검사하고, 만료 시 RefreshToken을 이용해 새 토큰을 자동으로 발급받아 **`앱 사용 중 로그아웃되는 현상을 방지하여`** 사용자 경험을 개선했습니다.
 
