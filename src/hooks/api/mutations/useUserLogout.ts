@@ -8,7 +8,7 @@ import { useToast } from "@/hooks";
 
 const fetchFn = async () => {
   try {
-    await Promise.all([api.post(`/userauth/logout`), persistor.purge()]);
+    await Promise.all([api.delete(`/userauth/logout`), persistor.purge()]);
     localStorage.removeItem("accessToken");
   } catch (error: any) {
     //error.requestValue = props;

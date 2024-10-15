@@ -41,10 +41,15 @@ authApi.interceptors.request.use(
     if (tokenInfo.tokenExpired) {
       //refresh api 호출하여 accessToken 및 refreshToken 재발급 후 저장
       try {
-        const response = await axios.post(
+        const response = await axios.put(
           `${baseUrl}/api/userauth/refresh`,
           { userId: tokenInfo.userId },
-          { withCredentials: true },
+          {
+            withCredentials: true,
+            headers: {
+              Authorization: `Bearer ${accessToken}`, // 만료된 AccessToken을 포함
+            },
+          },
         );
         accessToken = response.data.accessToken;
         localStorage.setItem("accessToken", accessToken!);
