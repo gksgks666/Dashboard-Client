@@ -56,7 +56,6 @@ https://dashboard-dj.vercel.app
 #### JWT 인증방식 로그인
 - JWT를 사용하여 AccessToken과 RefreshToken을 발급하고, **localStorage 및 HttpOnly Cookie에 저장하여 사용자 인증(Authentication)을** 처리합니다.
 - AccessToken의 존재 여부를 기반으로 **`사용자의 권한을 검사하여 인가(Authorization)를 수행`** 합니다.
-- AccessToken 및 RefreshToken를 이중으로 활용해 **`XSS, CSRF 공격에 대한 웹 보안을 강화`** 합니다.
 - AccessToken과 RefreshToken을 함께 사용하며, token을 1회성으로 관리하여 **`XSS 및 CSRF 공격에 대한 보안을 강화`** 합니다.
 
 ### 상태 관리
