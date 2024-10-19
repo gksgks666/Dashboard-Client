@@ -14,7 +14,7 @@ const fetchFn = async (
 ): Promise<API_ArrResponseType<CustomerList>> => {
   try {
     const { data } = await authApi.post<API_ArrResponseType<CustomerList>>(
-      `/management/customeraccountchange`,
+      `/management/customeraccount`,
       props,
     );
     return data;

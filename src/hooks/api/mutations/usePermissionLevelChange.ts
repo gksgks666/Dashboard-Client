@@ -10,10 +10,7 @@ type PLCResponse = Omit<API_ArrResponseType<UserList>, "rowCount">;
 
 const fetchFn = async (props: PLCProps): Promise<PLCResponse> => {
   try {
-    const { data } = await authApi.post<PLCResponse>(
-      `/management/rolechange`,
-      props,
-    );
+    const { data } = await authApi.post<PLCResponse>(`/management/role`, props);
     return data;
   } catch (error: any) {
     error.requestValue = props;

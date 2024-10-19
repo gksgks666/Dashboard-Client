@@ -17,7 +17,7 @@ const fetchFn = async ({
   try {
     const params = queryKey[1];
     const { data } = await authApi.get<API_ArrResponseType<CustomerList>>(
-      `/management/getcustomerlist`,
+      `/management/customerlist`,
       {
         params,
       },

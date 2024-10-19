@@ -32,7 +32,7 @@ const fetchFn = async ({ error, userId }: FetchFnArgs): Promise<void> => {
     stackTrace: error?.stack ?? `${error}`, // 스택 트레이스 내용
   };
   //const { data } = await authApi.post(`/errorlog/errorsave`, sendData);
-  await axios.post(`${baseUrl}/api/errorlog/errorsave`, sendData);
+  await axios.post(`${baseUrl}/api/errorlog/storage`, sendData);
 };
 
 export const useErrorSave = () => {
