@@ -73,8 +73,12 @@ https://dashboard-dj.vercel.app
 
 - API 데이터 관리를 단순화하고 최적화합니다.
 
+<<<<<<< HEAD
 ### 확장성있는 컴포넌트
 
+=======
+### 재사용성 높은 컴포넌트 설계
+>>>>>>> ef806fadd4cf1185b19de17cc3181cbe714fa09f
 #### Modal 컨테이너 분리
 
 - createPortal을 이용하여 모달을 modal-root에 별도로 위치시켜 다른 컴포넌트들과 독립적으로 동작하도록 구성했습니다.
