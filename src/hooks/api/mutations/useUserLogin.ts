@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useTypedDispatch } from "@/hooks/useRTKCustomhook";
 import { setLogin } from "@/rtk/features/userSlice";
 import { LoginProps, LoginResponse } from "@/types/API";
-import { useToast } from "@/hooks";
+import { toast } from "@/utils/toast";
 
 const fetchFn = async (props: LoginProps): Promise<LoginResponse> => {
   try {
@@ -33,6 +33,6 @@ export const useUserLogin = () => {
       dispatch(setLogin({ userId: data.userId, role: data.role }));
       navigate("/");
     },
-    onError: () => useToast(`다시 시도해 주세요.`),
+    onError: () => toast(`다시 시도해 주세요.`),
   });
 };

@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { authApi } from "@/utils/axios";
-import { useToast } from "@/hooks";
+import { toast } from "@/utils/toast";
 import { UserList, API_ArrResponseType } from "@/types/API";
 import { UserIdResponse } from "@/types/Common";
 import { AxiosError } from "axios";
@@ -22,7 +22,7 @@ export const usePermissionLevelChange = () => {
   return useMutation<PLCResponse, AxiosError, PLCProps>({
     mutationFn: fetchFn,
     onError: () => {
-      useToast(
+      toast(
         `권한이 정상적으로 변경되지 않았습니다. 잠시 후 다시 시도해 주세요.`,
       );
     },

@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { authApi } from "@/utils/axios";
-import { useToast } from "@/hooks";
+import { toast } from "@/utils/toast";
 import { AxiosError } from "axios";
 import { CustomerList, API_ArrResponseType } from "@/types/API";
 
@@ -35,7 +35,7 @@ export const useCustomerAccountChange = () => {
       console.log("succes");
     }, */
     onError: () => {
-      useToast(
+      toast(
         `계정 상태가 정상적으로 변경되지 않았습니다. 잠시 후 다시 시도해 주세요.`,
       );
     },

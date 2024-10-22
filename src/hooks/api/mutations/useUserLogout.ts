@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { setLogout } from "@/rtk/features/userSlice";
 import { useTypedDispatch } from "@/hooks";
 import { persistor } from "@/rtk";
-import { useToast } from "@/hooks";
+import { toast } from "@/utils/toast";
 
 const fetchFn = async () => {
   try {
@@ -28,7 +28,7 @@ export const useUserLogout = () => {
       }, 1000);
     },
     onError: () => {
-      useToast(`정상 처리되지 않았습니다.`);
+      toast(`정상 처리되지 않았습니다.`);
     },
   });
 };
