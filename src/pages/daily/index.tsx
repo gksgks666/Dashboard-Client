@@ -6,6 +6,7 @@ import { useGetStatistics } from "@/hooks";
 import DatePicker from "@/components/DatePicker/DatePicker";
 import dayjs from "dayjs";
 import { LineData } from "@/types/Module/Chart";
+import Loading from "@/components/Helper/Loading";
 
 const Daily = () => {
   const [startDate, setStartDate] = useState<string>(
@@ -63,7 +64,7 @@ const Daily = () => {
             setEndDate={setEndDate}
           />
         </Box>
-        {data ? (
+        {formattedData ? (
           <ResponsiveLine
             data={formattedData}
             theme={{
@@ -165,7 +166,7 @@ const Daily = () => {
             ]}
           />
         ) : (
-          <>Loading...</>
+          <Loading />
         )}
       </Box>
     </Box>

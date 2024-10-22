@@ -14,6 +14,7 @@ import BreakdownChart from "@/components/BreakdownChart";
 import OverviewChart from "@/components/OverviewChart";
 import { useFetchDashboard } from "@/hooks";
 import StatBox from "@/components/StatBox";
+import SuspenseWrapper from "@/components/Helper/SuspenseWrapper";
 
 function Dashboard() {
   const theme = useTheme();
@@ -112,7 +113,9 @@ function Dashboard() {
             borderRadius: "0.55rem",
           }}
         >
-          <OverviewChart view="sales" isDashboard={true} />
+          <SuspenseWrapper>
+            <OverviewChart view="sales" isDashboard={true} />
+          </SuspenseWrapper>
         </Box>
         <StatBox
           title="Monthly Sales"
